@@ -1,0 +1,13 @@
+// basic of  vectors 
+
+vector<pair<int,int>>v;
+        sort(A,A+N);
+        sort(B,B+M);
+        int i;
+        for(i=0;i<N;i++){
+            int k=X-A[i];
+            if(binary_search(B,B+M,k)){
+                v.push_back(make_pair(A[i],k));
+            }
+        }
+        return v;
