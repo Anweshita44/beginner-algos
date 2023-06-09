@@ -1,0 +1,37 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+void showpq(priority_queue<int,vector<int>,greater<int>>minheap)
+{
+    priority_queue<int,vector<int>,greater<int>>p=minheap;
+    cout<<"queue size is:"<<p.size();
+    cout<<endl;
+    while(!p.empty()){
+        cout<<p.top()<<" ";
+        p.pop();
+    }
+    cout<<endl;
+    
+    
+}
+
+int main()
+{
+   int arr[]={4,2,6,9,1};
+   int n=sizeof(arr)/sizeof(int);
+   priority_queue<int,vector<int>,greater<int>>pq(arr,arr+5);
+   
+   cout<<"array is:\n";
+   for(int i=0;i<n;i++){
+       cout<<arr[i]<<" ";
+   }
+   cout<<endl;
+   
+   cout<<"priority queue:\n";
+   showpq(pq);
+   
+   
+   
+    return 0;
+}
