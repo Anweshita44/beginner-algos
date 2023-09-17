@@ -1,0 +1,36 @@
+Given a text and a pattern, the task is to check if the pattern exists in the text or not
+Example 1:
+
+Input: text = "geeksforgeeks"
+       pat = "geek"
+Output: 1
+Explanation: "geek" exists in
+"geeksforgeeks"
+
+//code1//
+  int search(String text, String pat) 
+    {
+        if(text.indexOf(pat)==-1)
+        return 0;
+        return 1;
+    }
+
+    
+  //code2//
+  int search(string text, string pat)
+	{
+	    string str="";
+	    for(int i=0;i<pat.size();i++){
+	        str+=text[i];
+	    }
+	    if(str==pat)
+	    return true;
+	    for(int i=pat.size();i<text.size();i++){
+	        str+=text[i];
+	        str.erase(0,1);
+	        if(str==pat)
+	        return true;
+	    }
+	    return false;
+	}
+  
